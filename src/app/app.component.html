@@ -40,31 +40,40 @@
     </nav>
 
     <!-- BOUTON MOBILE -->
-    <button class="md:hidden text-black text-2xl" (click)="toggleMenu()">
-      <i *ngIf="!isMenuOpen" class="fa-solid fa-bars"></i>
-      <i *ngIf="isMenuOpen" class="fa-solid fa-xmark"></i>
+    <button
+      type="button"
+      class="md:hidden w-11 h-11 inline-flex items-center justify-center text-black text-3xl leading-none"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="mobile-navigation"
+      [attr.aria-label]="isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+    >
+      <span *ngIf="!isMenuOpen" aria-hidden="true">☰</span>
+      <span *ngIf="isMenuOpen" aria-hidden="true">×</span>
     </button>
   </div>
 
   <!-- MENU MOBILE -->
   <div
     *ngIf="isMenuOpen"
+    id="mobile-navigation"
     class="md:hidden bg-white border-t border-gray-200 px-4 py-3 flex flex-col gap-2"
   >
     <a
       routerLink="/"
       routerLinkActive="nav-active"
       [routerLinkActiveOptions]="{ exact: true }"
+      (click)="isMenuOpen = false"
       class="mobile-link"
       >ACCUEIL</a
     >
-    <a routerLink="/services" routerLinkActive="nav-active" class="mobile-link"
+    <a routerLink="/services" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="mobile-link"
       >SERVICES</a
     >
-    <a routerLink="/a-propos" routerLinkActive="nav-active" class="mobile-link"
+    <a routerLink="/a-propos" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="mobile-link"
       >À PROPOS</a
     >
-    <a routerLink="/contact" routerLinkActive="nav-active" class="mobile-link"
+    <a routerLink="/contact" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="mobile-link"
       >CONTACT</a
     >
   </div>
