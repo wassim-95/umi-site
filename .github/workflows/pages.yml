@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Build for GitHub Pages
-        run: npm run build -- --configuration production --base-href /umi-site/
+        run: npm run build -- --configuration production --base-href /
 
       - name: Add Angular Router fallback
         run: cp dist/umi-site/index.html dist/umi-site/404.html
