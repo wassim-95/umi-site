@@ -1,0 +1,108 @@
+/* ====== TAILWIND (OBLIGATOIRE) ====== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====== FONTS ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap');
+
+/* ====== BASE GLOBALE ====== */
+@layer base {
+  body {
+    /* on n'utilise plus bg-umiLight ici pour éviter l'erreur */
+    background-color: #f4f4f7; /* fond général clair */
+    @apply text-gray-900;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-heading {
+    font-family: 'Rajdhani', system-ui, sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  html {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Racine Angular */
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+/* ====== NAVBAR (CSS classique, sans @apply sur les couleurs custom) ====== */
+
+/* Liens desktop */
+.nav-link {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+/* Hover léger rouge */
+.nav-link:hover {
+
+  color: #fff;
+}
+
+/* Onglet ACTIF — fond clair */
+.nav-active {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* Liens mobile */
+.mobile-link {
+  padding: 0.25rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.mobile-link:hover {
+  color: #ffffff;
+}
+
+/* Option : navbar shrink via classe .navbar-shrink (si tu l'utilises encore) */
+.navbar-shrink img {
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+  color: #222;                      /* noir doux */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color .2s ease;
+}
+
+.nav-link:hover {
+  color: #E30613;                   /* rouge UMI */
+}
+
+/* LIEN ACTIF = same as hover */
+.nav-active {
+  color: #E30613 !important;
+}
+
+/* LIENS MOBILE */
+.mobile-link {
+  color: #222;
+  font-weight: 600;
+  padding: 6px 0;
+}
+
+.mobile-link:hover {
+  color: #E30613;
+}

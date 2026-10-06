@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="url(#grad4)"/>
+  <defs>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  <!-- Bell body -->
+  <path d="M 32 18 Q 26 18 24 24 L 24 36 Q 24 40 20 42 L 44 42 Q 40 40 40 36 L 40 24 Q 38 18 32 18 Z" fill="#DC2626" opacity="0.8"/>
+  <!-- Bell clapper -->
+  <circle cx="32" cy="44" r="2" fill="#DC2626" opacity="0.9"/>
+  <!-- Sound waves -->
+  <path d="M 18 28 Q 16 32 18 36" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 46 28 Q 48 32 46 36" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M 14 26 Q 12 32 14 38" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M 50 26 Q 52 32 50 38" stroke="#DC2626" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Glow effect -->
+  <circle cx="32" cy="32" r="16" fill="#DC2626" opacity="0.1"/>
+</svg>

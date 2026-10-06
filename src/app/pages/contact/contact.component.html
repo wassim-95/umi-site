@@ -1,0 +1,136 @@
+<div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+  <!-- Intro -->
+  <section class="space-y-3" appRevealOnScroll>
+    <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Contact</p>
+    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900">Contactez UMI</h1>
+    <p class="text-sm text-gray-600 max-w-3xl">
+      Un projet réseau, vidéosurveillance, contrôle d'accès ou alarme ? Envoyez-nous
+      votre demande, nous reviendrons vers vous rapidement avec des précisions ou un devis.
+    </p>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-8 items-start" appRevealOnScroll>
+    <!-- FORMULAIRE -->
+    <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm">
+      <h2 class="text-base font-semibold mb-4 text-gray-900">Formulaire de contact</h2>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+        <div *ngIf="errorMessage" class="text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
+          {{ errorMessage }}
+        </div>
+        <div *ngIf="successMessage"
+          class="text-xs text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          {{ successMessage }}
+        </div>
+
+        <!-- Nom -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="name">Nom &amp; prénom *</label>
+          <input id="name" type="text" formControlName="name" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="Ex : Ali Ben Salah" />
+          <div *ngIf="submitted && f['name'].errors" class="text-xs text-red-400">
+            <span *ngIf="f['name'].errors['required']">Ce champ est obligatoire.</span>
+            <span *ngIf="f['name'].errors['minlength']">Au moins 2 caractères.</span>
+          </div>
+        </div>
+
+        <!-- Société -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="company">Société (optionnel)</label>
+          <input id="company" type="text" formControlName="company" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="Nom de votre entreprise" />
+        </div>
+
+        <!-- Email -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="email">Email *</label>
+          <input id="email" type="email" formControlName="email" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="vous@example.com" />
+          <div *ngIf="submitted && f['email'].errors" class="text-xs text-red-400">
+            <span *ngIf="f['email'].errors['required']">Ce champ est obligatoire.</span>
+            <span *ngIf="f['email'].errors['email']">Format d’email invalide.</span>
+          </div>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="phone">Téléphone (optionnel)</label>
+          <input id="phone" type="tel" formControlName="phone" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="+216 XX XXX XXX" />
+        </div>
+
+        <!-- Sujet -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="subject">Sujet *</label>
+          <input id="subject" type="text" formControlName="subject" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="Ex : Installation caméras pour magasin" />
+          <div *ngIf="submitted && f['subject'].errors" class="text-xs text-red-400">
+            <span *ngIf="f['subject'].errors['required']">Ce champ est obligatoire.</span>
+            <span *ngIf="f['subject'].errors['minlength']">Au moins 3 caractères.</span>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="space-y-1 text-sm">
+          <label class="block text-gray-700 font-medium" for="message">Message *</label>
+          <textarea id="message" rows="4" formControlName="message" class="w-full rounded-lg bg-gray-50 border border-gray-300 px-3 py-2 text-sm text-gray-900
+                   focus:outline-none focus:border-umiRed focus:ring-1 focus:ring-umiRed"
+            placeholder="Décrivez votre besoin : type de locaux, surface, objectif (vidéosurveillance, contrôle d’accès, etc.)."></textarea>
+          <div *ngIf="submitted && f['message'].errors" class="text-xs text-red-400">
+            <span *ngIf="f['message'].errors['required']">Ce champ est obligatoire.</span>
+            <span *ngIf="f['message'].errors['minlength']">Message trop court.</span>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="isSending" class="mt-2 w-full bg-umiRed text-white rounded-full py-2.5 text-sm font-semibold
+                 hover:bg-red-700 hover:-translate-y-[1px] active:translate-y-0
+                 transition transform disabled:opacity-60 disabled:cursor-not-allowed">
+          <span *ngIf="!isSending">Envoyer le message</span>
+          <span *ngIf="isSending">Envoi en cours...</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Coordonnées -->
+    <div class="space-y-6 text-sm text-gray-700">
+      <div class="bg-white border border-gray-200 rounded-3xl p-6 space-y-2 shadow-sm">
+        <h2 class="text-base font-semibold mb-2 text-gray-900">Coordonnées UMI</h2>
+        <p>
+          <span class="font-semibold text-gray-900">Adresse :</span>
+          route menzel chaker km1, Immeuble Hamdani, 3072 Sfax
+        </p>
+        <p><span class="font-semibold text-gray-900">Ville :</span> Sfax, Tunisie</p>
+        <p>
+          <span class="font-semibold text-gray-900">Site web :</span>
+          <span class="text-umiRed font-semibold">umi.com.tn</span>
+        </p>
+        <p><span class="font-semibold text-gray-900">Téléphone :</span> <span class="italic text-gray-500">à
+            renseigner</span></p>
+        <p><span class="font-semibold text-gray-900">Email :</span> <span class="italic text-gray-500">à
+            renseigner</span>
+        </p>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-3xl p-6 space-y-3 shadow-sm">
+        <h2 class="text-base font-semibold text-gray-900">Contact WhatsApp</h2>
+        <p>
+          Pour une réponse rapide, vous pouvez également nous contacter directement sur WhatsApp.
+        </p>
+        <a href="#" class="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-semibold
+                 bg-green-600 hover:bg-green-700 hover:-translate-y-[1px] active:translate-y-0
+                 transition transform text-white shadow-md">
+          Ouvrir WhatsApp
+        </a>
+        <p class="text-xs text-gray-500 italic">
+          (Remplacez le lien par votre lien WhatsApp officiel, par exemple
+          <span class="text-gray-700">https://wa.me/216XXXXXXXX</span>)
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

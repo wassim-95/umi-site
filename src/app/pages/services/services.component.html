@@ -1,0 +1,237 @@
+<div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+  <!-- INTRO -->
+  <section class="space-y-3" appRevealOnScroll>
+    <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Nos services</p>
+    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900">
+      Solutions réseau &amp; sécurité pour votre entreprise
+    </h1>
+    <p class="text-sm text-gray-600 max-w-3xl">
+      UMI accompagne les professionnels dans la mise en place, la sécurisation et la supervision
+      de leurs infrastructures informatiques et systèmes de sécurité.
+    </p>
+  </section>
+  <!-- GRID SERVICES -->
+  <section class="grid md:grid-cols-2 gap-6" appRevealOnScroll>
+
+    <!-- Réseaux & infrastructure -->
+    <app-card
+  variant="large"
+  appTilt
+  [maxTilt]="6"
+  class="group relative overflow-hidden bg-white/80 border border-gray-200
+         rounded-2xl shadow-sm hover:shadow-umiCyan/30
+         hover:-translate-y-1 transition-all duration-300"
+    >
+      <div class="relative mb-4 rounded-xl overflow-hidden">
+        <img
+          ngSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop"
+          alt="Network Infrastructure"
+          width="400" height="300"
+          class="w-full h-44 object-cover transform group-hover:scale-105 transition duration-500"
+        />
+        <!-- overlay dégradé -->
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-umiRed/60
+                 opacity-70 group-hover:opacity-90 transition"
+        ></div>
+        <!-- petit label -->
+        <span
+          class="absolute bottom-3 left-4 text-[10px] uppercase tracking-[0.25em]
+                 text-red-100 font-semibold"
+        >
+          Réseaux
+        </span>
+      </div>
+
+      <h2 class="text-lg font-semibold text-gray-900">
+        Réseaux informatiques &amp; infrastructure
+      </h2>
+      <p class="text-sm text-gray-600 mt-1">
+        Conception et déploiement de réseaux fiables et performants adaptés à vos locaux
+        et à vos usages métier.
+      </p>
+      <ul class="text-sm text-gray-700 space-y-1 mt-3">
+        <li>• Étude et design d’architecture réseau</li>
+        <li>• Câblage structuré (cuivre &amp; fibre optique)</li>
+        <li>• Installation et configuration de switches et routeurs</li>
+        <li>• Wi-Fi professionnel pour bureaux, magasins, entrepôts</li>
+        <li>• Segmentation, VLAN, QoS, sécurité réseau</li>
+      </ul>
+    </app-card>
+
+    <!-- CCTV -->
+    <app-card
+  variant="large"
+  appTilt
+  [maxTilt]="6"
+  class="group relative overflow-hidden bg-white/80 border border-gray-200
+         rounded-2xl shadow-sm hover:shadow-umiCyan/30
+         hover:-translate-y-1 transition-all duration-300"
+    >
+      <div class="relative mb-4 rounded-xl overflow-hidden">
+        <img
+          ngSrc="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=300&fit=crop"
+          alt="CCTV Surveillance"
+          width="400" height="300"
+          class="w-full h-44 object-cover transform group-hover:scale-105 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-blue-500/60
+                 opacity-70 group-hover:opacity-90 transition"
+        ></div>
+        <span
+          class="absolute bottom-3 left-4 text-[10px] uppercase tracking-[0.25em]
+                 text-blue-100 font-semibold"
+        >
+          CCTV
+        </span>
+      </div>
+
+      <h2 class="text-lg font-semibold text-gray-900">
+        Caméras de surveillance (CCTV)
+      </h2>
+      <p class="text-sm text-gray-600 mt-1">
+        Solutions de vidéosurveillance pour protéger vos espaces, contrôler les accès et
+        dissuader les intrusions.
+      </p>
+      <ul class="text-sm text-gray-700 space-y-1 mt-3">
+        <li>• Installation de caméras IP et analogiques</li>
+        <li>• Enregistreurs NVR / DVR</li>
+        <li>• Consultation des flux en temps réel (PC, mobile, tablette)</li>
+        <li>• Conservation d’historique vidéo selon vos besoins</li>
+        <li>• Maintenance et optimisation des angles de vue</li>
+      </ul>
+    </app-card>
+
+    <!-- Contrôle d’accès -->
+    <app-card
+  variant="large"
+  appTilt
+  [maxTilt]="6"
+  class="group relative overflow-hidden bg-white/80 border border-gray-200
+         rounded-2xl shadow-sm hover:shadow-umiCyan/30
+         hover:-translate-y-1 transition-all duration-300"
+    >
+      <div class="relative mb-4 rounded-xl overflow-hidden">
+        <img
+          ngSrc="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=300&fit=crop"
+          alt="Access Control"
+          width="400" height="300"
+          class="w-full h-44 object-cover transform group-hover:scale-105 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-green-500/60
+                 opacity-70 group-hover:opacity-90 transition"
+        ></div>
+        <span
+          class="absolute bottom-3 left-4 text-[10px] uppercase tracking-[0.25em]
+                 text-green-100 font-semibold"
+        >
+          Accès
+        </span>
+      </div>
+
+      <h2 class="text-lg font-semibold text-gray-900">Contrôle d’accès</h2>
+      <p class="text-sm text-gray-600 mt-1">
+        Maîtrisez qui entre, où et quand, grâce à des solutions de contrôle d’accès adaptées
+        à vos exigences de sécurité.
+      </p>
+      <ul class="text-sm text-gray-700 space-y-1 mt-3">
+        <li>• Lecteurs par badge, code ou biométrie</li>
+        <li>• Gestion des droits d’accès par zone</li>
+        <li>• Gestion des horaires et profils utilisateurs</li>
+        <li>• Journaux d’entrées / sorties</li>
+        <li>• Intégration possible avec vidéosurveillance et alarme</li>
+      </ul>
+    </app-card>
+
+    <!-- Systèmes d’alarme -->
+    <app-card
+  variant="large"
+  appTilt
+  [maxTilt]="6"
+  class="group relative overflow-hidden bg-white/80 border border-gray-200
+         rounded-2xl shadow-sm hover:shadow-umiCyan/30
+         hover:-translate-y-1 transition-all duration-300"
+    >
+      <div class="relative mb-4 rounded-xl overflow-hidden">
+        <img
+          ngSrc="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+          alt="Alarm System"
+          width="400" height="300"
+          class="w-full h-44 object-cover transform group-hover:scale-105 transition duration-500"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-tr from-black/50 via-transparent to-amber-500/60
+                 opacity-70 group-hover:opacity-90 transition"
+        ></div>
+        <span
+          class="absolute bottom-3 left-4 text-[10px] uppercase tracking-[0.25em]
+                 text-amber-100 font-semibold"
+        >
+          Alarmes
+        </span>
+      </div>
+
+      <h2 class="text-lg font-semibold text-gray-900">Systèmes d’alarme &amp; sécurité</h2>
+      <p class="text-sm text-gray-600 mt-1">
+        Détection intrusion, périmétrique et volumétrique pour sécuriser vos bâtiments,
+        bureaux, dépôts ou commerces.
+      </p>
+      <ul class="text-sm text-gray-700 space-y-1 mt-3">
+        <li>• Analyse de vos risques et zones sensibles</li>
+        <li>• Alarmes intrusion adaptées à vos locaux</li>
+        <li>• Détecteurs de mouvement, ouverture, bris de glace</li>
+        <li>• Sirènes intérieures / extérieures</li>
+        <li>• Possibilités de notification à distance</li>
+      </ul>
+    </app-card>
+  </section>
+
+ <!-- MINI PORTFOLIO -->
+  <section class="space-y-4" appRevealOnScroll>
+    <h2 class="text-lg font-semibold text-gray-900">Quelques types de sites sécurisés par UMI</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-red-50 to-white
+               border border-red-100 p-4 flex flex-col justify-between min-h-[140px] shadow-sm">
+        <div class="text-sm font-semibold mb-2 text-gray-900">Magasin &amp; showroom</div>
+        <p class="text-xs text-gray-700">
+          Vidéosurveillance des entrées, caisse, réserves et vitrines.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-white
+               border border-blue-100 p-4 flex flex-col justify-between min-h-[140px] shadow-sm">
+        <div class="text-sm font-semibold mb-2 text-gray-900">Entrepôt &amp; dépôt</div>
+        <p class="text-xs text-gray-700">
+          Contrôle des accès, zones sensibles, périmètre extérieur.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-white
+               border border-green-100 p-4 flex flex-col justify-between min-h-[140px] shadow-sm">
+        <div class="text-sm font-semibold mb-2 text-gray-900">Bureaux &amp; administrations</div>
+        <p class="text-xs text-gray-700">
+          Réseaux internes, Wi-Fi pro, caméras &amp; contrôle d’accès.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-r from-umiRed to-[#b00018] rounded-3xl p-6 md:p-8
+           flex flex-col md:flex-row items-center justify-between gap-4" appRevealOnScroll>
+    <div>
+      <h3 class="text-lg md:text-xl font-semibold">Vous avez un projet en tête ?</h3>
+      <p class="text-sm text-red-100">
+        Décrivez-nous vos locaux, vos contraintes et votre budget. UMI vous propose
+        une solution réseau &amp; sécurité adaptée.
+      </p>
+    </div>
+    <a routerLink="/contact" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold
+             hover:bg-gray-900 hover:-translate-y-[1px] active:translate-y-0
+             transition transform">
+      Demander un devis
+    </a>
+  </section>
+</div>

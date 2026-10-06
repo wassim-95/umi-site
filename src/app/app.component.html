@@ -1,0 +1,90 @@
+<div class="min-h-screen flex flex-col bg-[#f4f4f7] text-gray-900">
+<!-- NAVBAR FIXE -->
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-red-600"
+>
+  <div
+    class="max-w-6xl mx-auto flex items-center justify-between px-4 transition-all duration-300"
+    [ngClass]="{ 'py-1': isScrolled, 'py-2': !isScrolled }"
+  >
+    <!-- LOGO -->
+    <a routerLink="/" class="flex items-center gap-3">
+      <img
+        src="assets/logo.png"
+        alt="UMI"
+        class="transition-all duration-300"
+        [ngClass]="{ 'h-8': isScrolled, 'h-10': !isScrolled }"
+      />
+    </a>
+
+    <!-- MENU DESKTOP -->
+    <nav
+      class="hidden md:flex items-center gap-8 text-[15px] font-semibold tracking-wide"
+    >
+      <a
+        routerLink="/"
+        routerLinkActive="nav-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav-link"
+        >ACCUEIL</a
+      >
+      <a routerLink="/services" routerLinkActive="nav-active" class="nav-link"
+        >SERVICES</a
+      >
+    <a routerLink="/a-propos" routerLinkActive="nav-active" class="nav-link"
+        >À PROPOS</a
+      >
+      <a routerLink="/contact" routerLinkActive="nav-active" class="nav-link"
+        >CONTACT</a
+      >
+    </nav>
+
+    <!-- BOUTON MOBILE -->
+    <button class="md:hidden text-black text-2xl" (click)="toggleMenu()">
+      <i *ngIf="!isMenuOpen" class="fa-solid fa-bars"></i>
+      <i *ngIf="isMenuOpen" class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div
+    *ngIf="isMenuOpen"
+    class="md:hidden bg-white border-t border-gray-200 px-4 py-3 flex flex-col gap-2"
+  >
+    <a
+      routerLink="/"
+      routerLinkActive="nav-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="mobile-link"
+      >ACCUEIL</a
+    >
+    <a routerLink="/services" routerLinkActive="nav-active" class="mobile-link"
+      >SERVICES</a
+    >
+    <a routerLink="/a-propos" routerLinkActive="nav-active" class="mobile-link"
+      >À PROPOS</a
+    >
+    <a routerLink="/contact" routerLinkActive="nav-active" class="mobile-link"
+      >CONTACT</a
+    >
+  </div>
+</header>
+
+<!-- CONTENU DES PAGES : on laisse de la place sous le header fixe -->
+<main class="flex-1 pt-20 md:pt-24">
+  <router-outlet></router-outlet>
+</main>
+
+  <!-- FOOTER -->
+  <footer class="mt-10 border-t border-gray-200 bg-white/90">
+    <div
+      class="max-w-6xl mx-auto px-4 py-4 text-[11px] flex flex-col md:flex-row items-center justify-between gap-2 text-gray-500"
+    >
+      <div>© 2026 UMI – Univers Multimedia Informatique. Tous droits réservés.</div>
+      <div>
+        route menzel chaker km1, Immeuble Hamdani, 3072 SFAX – <span class="text-umiRed">umi.com.tn</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
