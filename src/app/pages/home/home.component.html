@@ -1,257 +1,160 @@
-<section class="relative w-full h-[70vh] overflow-hidden flex items-center">
+<section class="relative min-h-[620px] overflow-hidden bg-umiDark flex items-center">
+  <img src="assets/data-center.png" alt="Infrastructure informatique professionnelle" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-slate-950/75 to-slate-950/35"></div>
+  <div class="absolute inset-y-0 left-0 w-full bg-umiRed/70 lg:w-[54%] lg:bg-umiRed/85"
+       style="clip-path: polygon(0 0, 72% 0, 100% 100%, 0 100%);"></div>
 
-  <!-- BACKGROUND IMAGE -->
-  <img
-      src="assets/data-center.png"
-    alt="UMI data center"
-    class="absolute inset-0 w-full h-full object-cover"
-  >
-
-  <!-- RED DIAGONAL SHAPE (comme dans la brochure page 1) -->
-  <div class="absolute left-0 top-0 h-full w-1/2 bg-umiRed/90"
-       style="clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);">
-  </div>
-
-  <!-- DARK BLUE ANGLE (comme page 6) -->
-  <div class="absolute right-0 bottom-0 h-1/3 w-2/5 bg-umiNavy"
-       style="clip-path: polygon(100% 0, 100% 100%, 0 100%); opacity:0.85;">
-  </div>
-
-  <!-- CONTENT -->
-  <div class="relative z-10 w-full min-w-0 max-w-2xl mx-auto text-center text-white px-5">
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">
-      UMI — Votre partenaire réseau & sécurité
-    </h1>
-
-    <p class="mt-4 text-base sm:text-lg font-light opacity-90">
-      Solutions professionnelles en réseaux, vidéosurveillance, contrôle d’accès
-      et sécurité électronique.
-    </p>
-
-    <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-      <a routerLink="/contact"
-        class="w-full sm:w-auto px-6 py-3 rounded-full bg-white text-umiRed text-center font-semibold shadow-lg hover:scale-105 transition">
-        Demander un devis
-      </a>
-
-      <a routerLink="/services"
-        class="w-full sm:w-auto px-6 py-3 rounded-full border border-white text-white text-center font-semibold hover:bg-white/10 transition">
-        Voir nos services
-      </a>
-    </div>
-  </div>
-
-</section>
-<div class="max-w-6xl mx-auto px-4 py-10 space-y-16">
-  
-  
-
-
-  <!-- SECTION INTRO + VISUEL -->
-  <section class="grid md:grid-cols-2 gap-10 items-center" appRevealOnScroll>
-    <div class="space-y-6">
-      <!-- Illustration (image en ligne pour éviter le bloc noir) -->
-      <img
-        src="assets/it.jpg"
-        alt="Illustration solutions réseau et sécurité"
-        class="w-full rounded-lg mb-6"
-      />
-
-      <p class="text-sm uppercase tracking-[0.3em] text-umiRed font-semibold">
-        Réseaux &amp; Sécurité
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-5 py-16 md:py-20">
+    <div class="max-w-3xl text-white">
+      <span class="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] backdrop-blur-sm">
+        Réseaux · Sécurité · Informatique
+      </span>
+      <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] drop-shadow-lg">
+        Des infrastructures fiables pour protéger et connecter votre activité
+      </h1>
+      <p class="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-white/90">
+        UMI conçoit, installe et maintient vos réseaux, systèmes de vidéosurveillance,
+        contrôles d’accès et solutions d’alarme à Sfax et partout en Tunisie.
       </p>
 
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-        UMI, votre partenaire <span class="text-umiRed">réseau &amp; sécurité</span> à Sfax.
-      </h2>
-
-      <p class="text-gray-600 text-sm md:text-base">
-        Univers Multimedia Informatique est spécialisée dans les réseaux informatiques,
-        la vidéosurveillance, le contrôle d'accès et les systèmes d'alarme pour les
-        entreprises, commerces et institutions.
-      </p>
-
-      <div class="flex flex-wrap gap-3">
-        <a
-          routerLink="/contact"
-          class="bg-umiRed px-5 py-2.5 rounded-full text-sm font-semibold
-                 hover:bg-red-700 hover:-translate-y-[1px] active:translate-y-0
-                 transition transform text-white"
-        >
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a routerLink="/contact"
+           class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 font-semibold text-umiRed shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
           Demander un devis
         </a>
-        <a
-          routerLink="/services"
-          class="border border-gray-300 px-5 py-2.5 rounded-full text-sm text-gray-700
-                 hover:border-umiRed hover:text-umiRed hover:bg-red-50
-                 hover:-translate-y-[1px] active:translate-y-0
-                 transition transform"
-        >
-          Voir nos services
+        <a href="https://wa.me/21622137505" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-black/20 px-7 py-3.5 font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-gray-900">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          Écrire sur WhatsApp
         </a>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 text-xs text-gray-600">
-        <div>
-          <div class="font-semibold text-gray-900">Expertise</div>
-          <div>Étude, installation et maintenance de vos infrastructures réseau.</div>
+      <div class="mt-9 grid max-w-2xl grid-cols-1 gap-3 text-sm sm:grid-cols-3">
+        <div class="rounded-2xl border border-white/20 bg-black/20 px-4 py-3 backdrop-blur-sm">
+          <div class="font-semibold">Étude sur mesure</div>
+          <div class="mt-1 text-xs text-white/70">Selon vos locaux et usages</div>
         </div>
-        <div>
-          <div class="font-semibold text-gray-900">Sécurité</div>
-          <div>Solutions CCTV, contrôle d'accès et alarme adaptées à vos locaux.</div>
+        <div class="rounded-2xl border border-white/20 bg-black/20 px-4 py-3 backdrop-blur-sm">
+          <div class="font-semibold">Installation soignée</div>
+          <div class="mt-1 text-xs text-white/70">Matériel adapté et configuré</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Visuel droite -->
-    <div
-      class="bg-gradient-to-br from-red-50 via-white to-pink-50 rounded-3xl
-             border-2 border-red-100 p-6 shadow-lg"
-    >
-      <div class="h-full flex flex-col justify-between">
-        <div class="space-y-4">
-          <div class="text-xs uppercase tracking-[0.2em] text-umiRed font-semibold">
-            Solutions UMI
-          </div>
-          <ul class="space-y-3 text-sm text-gray-700">
-            <li class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-umiRed"></span>
-              <span>Conception et déploiement de réseaux informatiques.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-umiRed"></span>
-              <span>Installation de caméras de surveillance IP &amp; analogiques.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-umiRed"></span>
-              <span>Contrôle d'accès par badge, code ou biométrie.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 w-2 h-2 rounded-full bg-umiRed"></span>
-              <span>Systèmes d'alarme intrusion adaptés à vos locaux.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="mt-6 text-xs text-gray-600">
-          Basés à <span class="text-gray-900 font-semibold">Sfax</span>, nous accompagnons nos clients
-          partout en Tunisie.
+        <div class="rounded-2xl border border-white/20 bg-black/20 px-4 py-3 backdrop-blur-sm">
+          <div class="font-semibold">Maintenance</div>
+          <div class="mt-1 text-xs text-white/70">Suivi de vos équipements</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- APERÇU SERVICES -->
-  <section class="space-y-6" appRevealOnScroll>
-    <h2 class="text-xl font-semibold text-gray-900">Nos domaines d'expertise</h2>
-
-    <div class="grid md:grid-cols-4 gap-4 text-sm">
-      <app-card>
-        <div class="font-semibold text-gray-900">Réseaux &amp; infrastructure</div>
-        <p class="text-gray-600 text-xs">
-          Conception, câblage, switches, routeurs, Wi-Fi professionnel.
-        </p>
-      </app-card>
-
-      <app-card>
-        <div class="font-semibold text-gray-900">Caméras de surveillance</div>
-        <p class="text-gray-600 text-xs">
-          Caméras IP / analogiques, enregistrement, accès à distance.
-        </p>
-      </app-card>
-
-      <app-card>
-        <div class="font-semibold text-gray-900">Contrôle d'accès</div>
-        <p class="text-gray-600 text-xs">
-          Badges, codes, biométrie, gestion des entrées et horaires.
-        </p>
-      </app-card>
-
-      <app-card>
-        <div class="font-semibold text-gray-900">Systèmes d'alarme</div>
-        <p class="text-gray-600 text-xs">
-          Alarmes intrusion, périmétriques et solutions de monitoring.
-        </p>
-      </app-card>
-    </div>
-  </section>
-
-  <!-- CHIFFRES CLÉS -->
-  <section class="space-y-6" appRevealOnScroll>
-    <h2 class="text-xl font-semibold text-gray-900">UMI en quelques chiffres</h2>
-    <p class="text-sm text-gray-600 max-w-2xl">
-      Nous accompagnons entreprises, commerces et institutions dans leurs projets
-      réseaux &amp; sécurité partout en Tunisie.
-    </p>
-
-    <div class="grid md:grid-cols-4 gap-4">
-      <app-card [centered]="true">
-        <div class="text-3xl mb-2">
-          <i class="fa-solid fa-network-wired"></i>
-        </div>
-        <div class="text-2xl font-bold flex items-baseline gap-1 justify-center mx-auto">
-          <span [appCountUp]="20" [duration]="2400"></span>
-          <span>+</span>
-        </div>
-        <div class="text-xs text-gray-600 mt-1">Projets réseaux déployés</div>
-      </app-card>
-
-      <app-card [centered]="true">
-        <div class="text-3xl mb-2">
-          <i class="fa-solid fa-video"></i>
-        </div>
-        <div class="text-2xl font-bold flex items-baseline gap-1 justify-center mx-auto">
-          <span [appCountUp]="350" [duration]="2400"></span>
-          <span>+</span>
-        </div>
-        <div class="text-xs text-gray-600 mt-1">Caméras installées</div>
-      </app-card>
-
-      <app-card [centered]="true">
-        <div class="text-3xl mb-2">
-          <i class="fa-solid fa-door-closed"></i>
-        </div>
-        <div class="text-2xl font-bold flex items-baseline gap-1 justify-center mx-auto">
-          <span [appCountUp]="15" [duration]="2400"></span>
-          <span>+</span>
-        </div>
-        <div class="text-xs text-gray-600 mt-1">Sites en contrôle d'accès</div>
-      </app-card>
-
-      <app-card [centered]="true">
-        <div class="text-3xl mb-2">
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <div class="text-2xl font-bold flex items-baseline gap-1 justify-center mx-auto">
-          <span [appCountUp]="100" [duration]="2400"></span>
-          <span>%</span>
-        </div>
-        <div class="text-xs text-gray-600 mt-1">Clients accompagnés sur la durée</div>
-      </app-card>
-    </div>
-  </section>
-
-  <!-- CALL TO ACTION -->
-  <section
-    class="bg-gradient-to-r from-umiRed to-[#b00018] rounded-3xl p-6 md:p-8
-           flex flex-col md:flex-row items-center justify-between gap-4"
-    appRevealOnScroll
-  >
+<div class="max-w-6xl mx-auto px-4 py-14 md:py-20 space-y-20">
+  <section class="grid items-center gap-10 lg:grid-cols-2" appRevealOnScroll>
     <div>
-      <h3 class="text-lg md:text-xl font-semibold text-white">Un projet réseau ou sécurité ?</h3>
-      <p class="text-sm text-red-100">
-        Expliquez-nous votre besoin, nous vous proposons une solution adaptée et un devis rapide.
+      <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Univers Multimedia Informatique</p>
+      <h2 class="mt-4 text-3xl md:text-4xl font-bold text-gray-900">
+        Un interlocuteur unique pour votre <span class="text-umiRed">infrastructure</span>
+      </h2>
+      <p class="mt-5 text-gray-600 leading-relaxed">
+        Nous accompagnons entreprises, commerces et institutions depuis l’étude jusqu’à
+        la mise en service. Chaque solution est pensée pour être fiable, simple à utiliser
+        et adaptée à votre environnement.
       </p>
+
+      <div class="mt-7 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="flex items-center gap-3 font-semibold text-gray-900">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            Conseil &amp; installation
+          </div>
+          <p class="mt-2 text-sm text-gray-600">Une solution dimensionnée selon vos priorités et votre budget.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="flex items-center gap-3 font-semibold text-gray-900">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-solid fa-headset"></i></span>
+            Accompagnement durable
+          </div>
+          <p class="mt-2 text-sm text-gray-600">Maintenance et évolution de vos installations dans le temps.</p>
+        </div>
+      </div>
+      <a routerLink="/a-propos" class="mt-7 inline-flex items-center gap-2 font-semibold text-umiRed hover:gap-3 transition-all">Découvrir UMI <span aria-hidden="true">→</span></a>
     </div>
 
-    <a
-      routerLink="/contact"
-      class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold
-             hover:bg-gray-900 hover:-translate-y-[1px] active:translate-y-0
-             transition transform"
-    >
-      Contacter UMI
-    </a>
+    <div class="relative">
+      <div class="overflow-hidden rounded-[2rem] shadow-2xl">
+        <img src="assets/it.jpg" alt="Solutions informatiques et de sécurité UMI" class="h-[420px] w-full object-cover" />
+      </div>
+      <div class="absolute -bottom-6 left-4 right-4 rounded-2xl border border-white/70 bg-white/95 p-5 shadow-xl backdrop-blur md:left-auto md:right-6 md:w-72">
+        <div class="flex items-start gap-3">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-umiRed text-white"><i class="fa-solid fa-location-dot"></i></span>
+          <div><div class="font-semibold text-gray-900">Basés à Sfax</div><p class="mt-1 text-sm text-gray-600">Intervention et accompagnement partout en Tunisie.</p></div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <section class="space-y-8" appRevealOnScroll>
+    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div><p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Notre expertise</p><h2 class="mt-3 text-3xl font-bold text-gray-900">Des solutions complètes pour vos locaux</h2></div>
+      <a routerLink="/services" class="font-semibold text-umiRed hover:underline">Voir tous les services →</a>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-2xl text-umiRed transition group-hover:bg-umiRed group-hover:text-white"><i class="fa-solid fa-network-wired"></i></span>
+        <h3 class="mt-5 text-lg font-bold text-gray-900">Réseaux informatiques</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Câblage, fibre, switches, routeurs et Wi-Fi professionnel.</p>
+      </article>
+      <article class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-2xl text-umiRed transition group-hover:bg-umiRed group-hover:text-white"><i class="fa-solid fa-video"></i></span>
+        <h3 class="mt-5 text-lg font-bold text-gray-900">Vidéosurveillance</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Caméras IP et analogiques, enregistrement et accès à distance.</p>
+      </article>
+      <article class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-2xl text-umiRed transition group-hover:bg-umiRed group-hover:text-white"><i class="fa-solid fa-fingerprint"></i></span>
+        <h3 class="mt-5 text-lg font-bold text-gray-900">Contrôle d’accès</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Badges, codes, biométrie et gestion des entrées et horaires.</p>
+      </article>
+      <article class="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-2 hover:border-red-200 hover:shadow-xl">
+        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-2xl text-umiRed transition group-hover:bg-umiRed group-hover:text-white"><i class="fa-solid fa-shield-halved"></i></span>
+        <h3 class="mt-5 text-lg font-bold text-gray-900">Alarmes &amp; sécurité</h3><p class="mt-2 text-sm leading-relaxed text-gray-600">Détection d’intrusion et protection adaptée à vos espaces.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-sm md:p-10" appRevealOnScroll>
+    <div class="max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Équipements</p>
+      <h2 class="mt-3 text-3xl font-bold text-gray-900">Des marques reconnues, selon vos besoins</h2>
+      <p class="mt-3 text-sm leading-relaxed text-gray-600">UMI propose et intègre une sélection de matériels informatiques et de sécurité issus de marques reconnues.</p>
+    </div>
+    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+      <div class="brand-tile"><img src="assets/brands/dell.svg" alt="Dell" class="max-h-11 max-w-[130px]" /></div>
+      <div class="brand-tile"><img src="assets/brands/hp.svg" alt="HP" class="max-h-12 max-w-[120px]" /></div>
+      <div class="brand-tile"><img src="assets/brands/lenovo.svg" alt="Lenovo" class="max-h-10 max-w-[135px]" /></div>
+      <div class="brand-tile"><img src="assets/brands/asus.svg" alt="ASUS" class="max-h-10 max-w-[135px]" /></div>
+      <div class="brand-tile"><img src="assets/brands/gigabyte.png" alt="GIGABYTE" class="max-h-11 max-w-[140px] object-contain" /></div>
+      <div class="brand-tile flex-col gap-2"><img src="assets/brands/msi.svg" alt="MSI" class="max-h-12 max-w-[125px]" /><span class="text-xs font-semibold tracking-wide text-gray-500">MSI</span></div>
+      <div class="brand-tile"><img src="assets/brands/epson.svg" alt="Epson" class="max-h-10 max-w-[135px]" /></div>
+      <div class="brand-tile flex-col gap-2"><img src="assets/brands/dahua.png" alt="Dahua" class="max-h-11 max-w-[120px] object-contain" /><span class="text-xs font-semibold tracking-wide text-gray-500">DAHUA</span></div>
+      <div class="brand-tile flex-col gap-2"><img src="assets/brands/hikvision.png" alt="Hikvision" class="max-h-10 max-w-[140px] brightness-0" /><span class="text-xs font-semibold tracking-wide text-gray-500">HIKVISION</span></div>
+      <div class="brand-tile"><span class="text-2xl font-extrabold tracking-tight text-gray-900">ZKTeco</span></div>
+    </div>
+  </section>
+
+  <section class="overflow-hidden rounded-[2rem] bg-umiDark px-6 py-10 text-white shadow-xl md:px-10" appRevealOnScroll>
+    <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div><p class="text-xs uppercase tracking-[0.3em] text-red-300 font-semibold">Notre expérience</p><h2 class="mt-3 text-3xl font-bold">UMI en quelques chiffres</h2></div>
+      <p class="max-w-xl text-sm text-gray-300">Des installations réalisées pour des entreprises, commerces et institutions.</p>
+    </div>
+    <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="stat-tile"><i class="fa-solid fa-network-wired text-2xl text-red-400"></i><div class="mt-3 text-3xl font-bold"><span [appCountUp]="20" [duration]="2400"></span>+</div><div class="mt-1 text-xs text-gray-300">Projets réseaux déployés</div></div>
+      <div class="stat-tile"><i class="fa-solid fa-video text-2xl text-red-400"></i><div class="mt-3 text-3xl font-bold"><span [appCountUp]="350" [duration]="2400"></span>+</div><div class="mt-1 text-xs text-gray-300">Caméras installées</div></div>
+      <div class="stat-tile"><i class="fa-solid fa-fingerprint text-2xl text-red-400"></i><div class="mt-3 text-3xl font-bold"><span [appCountUp]="15" [duration]="2400"></span>+</div><div class="mt-1 text-xs text-gray-300">Sites en contrôle d’accès</div></div>
+      <div class="stat-tile"><i class="fa-solid fa-shield-halved text-2xl text-red-400"></i><div class="mt-3 text-3xl font-bold"><span [appCountUp]="100" [duration]="2400"></span>%</div><div class="mt-1 text-xs text-gray-300">Clients accompagnés sur la durée</div></div>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-umiRed to-red-800 p-7 text-white shadow-xl md:p-10" appRevealOnScroll>
+    <div class="absolute -right-16 -top-16 h-52 w-52 rounded-full border-[32px] border-white/10"></div>
+    <div class="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div class="max-w-2xl"><h2 class="text-2xl md:text-3xl font-bold">Parlons de votre prochain projet</h2><p class="mt-2 text-red-50">Décrivez-nous vos locaux et vos objectifs. Nous vous orienterons vers une solution adaptée.</p></div>
+      <a routerLink="/contact" class="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-7 py-3.5 font-semibold text-umiRed shadow-lg transition hover:-translate-y-1">Obtenir un devis</a>
+    </div>
+  </section>
 </div>

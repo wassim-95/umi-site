@@ -1,12 +1,19 @@
 <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
   <!-- Intro -->
-  <section class="space-y-3" appRevealOnScroll>
-    <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">Contact</p>
-    <h1 class="text-2xl md:text-3xl font-semibold text-gray-900">Contactez UMI</h1>
-    <p class="text-sm text-gray-600 max-w-3xl">
+  <section class="relative overflow-hidden rounded-[2rem] bg-umiDark px-6 py-8 text-white shadow-xl md:px-10 md:py-10" appRevealOnScroll>
+    <div class="absolute -right-10 -top-16 h-52 w-52 rounded-full border-[28px] border-white/5"></div>
+    <div class="relative">
+    <p class="text-xs uppercase tracking-[0.3em] text-red-300 font-semibold">Contact</p>
+    <h1 class="mt-3 text-3xl md:text-4xl font-bold">Parlons de votre projet</h1>
+    <p class="mt-3 text-sm leading-relaxed text-gray-300 max-w-3xl">
       Un projet réseau, vidéosurveillance, contrôle d'accès ou alarme ? Envoyez-nous
       votre demande, nous reviendrons vers vous rapidement avec des précisions ou un devis.
     </p>
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+      <a href="tel:+21622137505" class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-gray-900"><i class="fa-solid fa-phone text-umiRed"></i>+216 22 137 505</a>
+      <a href="https://wa.me/21622137505" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
+    </div>
+    </div>
   </section>
 
   <section class="grid md:grid-cols-2 gap-8 items-start" appRevealOnScroll>
@@ -98,54 +105,15 @@
 
     <!-- Coordonnées -->
     <div class="space-y-6 text-sm text-gray-700">
-      <div class="bg-white border border-gray-200 rounded-3xl p-6 space-y-2 shadow-sm">
-        <h2 class="text-base font-semibold mb-2 text-gray-900">Coordonnées UMI</h2>
-        <p>
-          <span class="font-semibold text-gray-900">Adresse :</span>
-          route menzel chaker km1, Immeuble Hamdani, 3072 Sfax
-        </p>
-        <p><span class="font-semibold text-gray-900">Ville :</span> Sfax, Tunisie</p>
-        <p>
-          <a
-            href="https://maps.app.goo.gl/9RtUweyP7tShoaEh6"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-umiRed font-semibold hover:underline"
-          >
-            Voir l’adresse sur Google Maps
-          </a>
-        </p>
-        <p>
-          <span class="font-semibold text-gray-900">Site web :</span>
-          <span class="text-umiRed font-semibold">umi.com.tn</span>
-        </p>
-        <p>
-          <span class="font-semibold text-gray-900">Téléphone :</span>
-          <a href="tel:+21622137505" class="text-umiRed font-semibold hover:underline">
-            +216 22 137 505
-          </a>
-        </p>
-        <p>
-          <span class="font-semibold text-gray-900">Email :</span>
-          <a href="mailto:contact@umi.com.tn" class="text-umiRed font-semibold hover:underline">
-            contact@umi.com.tn
-          </a>
-        </p>
-        <div class="pt-2">
-          <p class="font-semibold text-gray-900">Horaires :</p>
-          <p>Lundi – vendredi : 8h30 – 17h00</p>
-          <p>Samedi : 8h30 – 14h00</p>
+      <div class="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm">
+        <h2 class="text-lg font-bold mb-5 text-gray-900">Coordonnées UMI</h2>
+        <div class="space-y-5">
+          <div class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-solid fa-location-dot"></i></span><div><div class="font-semibold text-gray-900">Adresse</div><p class="mt-1 text-sm text-gray-600">Route Menzel Chaker km 1, Immeuble Hamdani, 3072 Sfax</p><a href="https://maps.app.goo.gl/9RtUweyP7tShoaEh6" target="_blank" rel="noopener noreferrer" class="mt-1 inline-block text-sm font-semibold text-umiRed hover:underline">Ouvrir dans Google Maps</a></div></div>
+          <div class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-solid fa-phone"></i></span><div><div class="font-semibold text-gray-900">Téléphone</div><a href="tel:+21622137505" class="mt-1 inline-block text-sm text-gray-600 hover:text-umiRed">+216 22 137 505</a></div></div>
+          <div class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-solid fa-envelope"></i></span><div><div class="font-semibold text-gray-900">Email</div><a href="mailto:contact@umi.com.tn" class="mt-1 inline-block text-sm text-gray-600 hover:text-umiRed">contact@umi.com.tn</a></div></div>
+          <div class="flex items-start gap-4"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-red-50 text-umiRed"><i class="fa-regular fa-clock"></i></span><div><div class="font-semibold text-gray-900">Horaires</div><p class="mt-1 text-sm text-gray-600">Lundi – vendredi : 8h30 – 17h00<br />Samedi : 8h30 – 14h00</p></div></div>
         </div>
-        <p>
-          <a
-            href="https://www.facebook.com/UmInformatique"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-umiRed font-semibold hover:underline"
-          >
-            Suivre UMI sur Facebook
-          </a>
-        </p>
+        <a href="https://www.facebook.com/UmInformatique" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 transition hover:border-umiRed hover:text-umiRed"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
       </div>
 
       <div class="bg-white border border-gray-200 rounded-3xl p-6 space-y-3 shadow-sm">
@@ -159,6 +127,16 @@
           Ouvrir WhatsApp
         </a>
         <p class="text-xs text-gray-500">WhatsApp : +216 22 137 505</p>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+        <iframe
+          title="Localisation UMI à Sfax"
+          src="https://www.google.com/maps?q=Route%20Menzel%20Chaker%20km%201%20Immeuble%20Hamdani%20Sfax&output=embed"
+          class="h-72 w-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>

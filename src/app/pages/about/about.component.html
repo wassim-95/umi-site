@@ -2,22 +2,23 @@
 
   <!-- HERO / INTRO -->
   <section
-    class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-red-50 to-white p-10 flex flex-col gap-4 border border-red-100"
+    class="relative rounded-[2rem] overflow-hidden bg-umiDark p-8 md:p-10 flex flex-col gap-4 text-white shadow-xl"
     appRevealOnScroll>
 
     <!-- Logo en filigrane -->
     <img src="assets/logo.png"
-      class="absolute right-0 bottom-0 opacity-10 w-40 pointer-events-none select-none" />
+      alt=""
+      class="absolute right-0 bottom-0 opacity-10 w-48 pointer-events-none select-none" />
 
-    <p class="text-xs uppercase tracking-[0.3em] text-umiRed font-semibold">À propos</p>
-    <h1 class="text-3xl md:text-4xl font-semibold text-gray-900">UMI – Univers Multimedia Informatique</h1>
-    <p class="text-sm text-gray-600 max-w-3xl">
+    <p class="text-xs uppercase tracking-[0.3em] text-red-300 font-semibold">À propos</p>
+    <h1 class="text-3xl md:text-4xl font-bold">UMI – Univers Multimedia Informatique</h1>
+    <p class="text-sm leading-relaxed text-gray-300 max-w-3xl">
       Basée à Sfax, UMI accompagne les entreprises, commerces et institutions dans la
       mise en place de solutions réseau et de sécurité fiables, adaptées à leurs enjeux
       quotidiens.
     </p>
 
-    <button class="btn-umi w-fit mt-3">Demander un audit gratuit</button>
+    <a routerLink="/contact" class="mt-3 inline-flex w-fit items-center rounded-full bg-umiRed px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-red-700">Demander un devis</a>
   </section>
 
   <!-- SECTION 2 : Présentation + valeurs -->

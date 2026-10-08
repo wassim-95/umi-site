@@ -19,7 +19,7 @@
 
     <!-- MENU DESKTOP -->
     <nav
-      class="hidden md:flex items-center gap-8 text-[15px] font-semibold tracking-wide"
+      class="hidden md:flex items-center gap-3 lg:gap-6 text-[14px] font-semibold tracking-wide"
     >
       <a
         routerLink="/"
@@ -37,6 +37,10 @@
       <a routerLink="/contact" routerLinkActive="nav-active" class="nav-link"
         >CONTACT</a
       >
+      <a routerLink="/contact"
+         class="ml-1 inline-flex items-center rounded-full bg-umiRed px-5 py-2.5 text-white shadow-md transition hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-lg">
+        DEMANDER UN DEVIS
+      </a>
     </nav>
 
     <!-- BOUTON MOBILE -->
@@ -76,6 +80,10 @@
     <a routerLink="/contact" routerLinkActive="nav-active" (click)="isMenuOpen = false" class="mobile-link"
       >CONTACT</a
     >
+    <div class="mt-2 grid grid-cols-2 gap-2 border-t border-gray-200 pt-3">
+      <a href="tel:+21622137505" class="rounded-full border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-gray-800">Appeler</a>
+      <a href="https://wa.me/21622137505" target="_blank" rel="noopener noreferrer" class="rounded-full bg-green-600 px-3 py-2 text-center text-sm font-semibold text-white">WhatsApp</a>
+    </div>
   </div>
 </header>
 
@@ -84,16 +92,62 @@
   <router-outlet></router-outlet>
 </main>
 
-  <!-- FOOTER -->
-  <footer class="mt-10 border-t border-gray-200 bg-white/90">
-    <div
-      class="max-w-6xl mx-auto px-4 py-4 text-[11px] flex flex-col md:flex-row items-center justify-between gap-2 text-gray-500"
-    >
-      <div>© 2026 UMI – Univers Multimedia Informatique. Tous droits réservés.</div>
+  <footer class="mt-12 bg-umiDark text-gray-300">
+    <div class="max-w-6xl mx-auto px-4 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
       <div>
-        route menzel chaker km1, Immeuble Hamdani, 3072 SFAX – <span class="text-umiRed">umi.com.tn</span>
+        <div class="inline-flex rounded-xl bg-white p-2">
+          <img src="assets/logo.png" alt="UMI" class="h-10 w-auto" />
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-gray-400">
+          Solutions professionnelles en réseaux informatiques, vidéosurveillance,
+          contrôle d’accès et systèmes d’alarme.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-lg font-bold text-white">Navigation</h2>
+        <nav class="mt-4 flex flex-col gap-2 text-sm">
+          <a routerLink="/" class="hover:text-white">Accueil</a>
+          <a routerLink="/services" class="hover:text-white">Services</a>
+          <a routerLink="/a-propos" class="hover:text-white">À propos</a>
+          <a routerLink="/contact" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-lg font-bold text-white">Nous contacter</h2>
+        <div class="mt-4 space-y-3 text-sm">
+          <a href="tel:+21622137505" class="flex items-center gap-3 hover:text-white"><i class="fa-solid fa-phone text-umiRed"></i>+216 22 137 505</a>
+          <a href="mailto:contact@umi.com.tn" class="flex items-center gap-3 hover:text-white"><i class="fa-solid fa-envelope text-umiRed"></i>contact@umi.com.tn</a>
+          <a href="https://maps.app.goo.gl/9RtUweyP7tShoaEh6" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 hover:text-white"><i class="fa-solid fa-location-dot mt-1 text-umiRed"></i><span>Route Menzel Chaker km 1<br />Immeuble Hamdani, Sfax</span></a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-lg font-bold text-white">Horaires</h2>
+        <div class="mt-4 space-y-2 text-sm text-gray-400">
+          <p>Lundi – vendredi<br /><span class="font-semibold text-white">8h30 – 17h00</span></p>
+          <p>Samedi<br /><span class="font-semibold text-white">8h30 – 14h00</span></p>
+        </div>
+        <a href="https://www.facebook.com/UmInformatique" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-umiRed" aria-label="Facebook UMI">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-4 py-5 text-xs text-gray-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <span>© 2026 UMI – Univers Multimedia Informatique. Tous droits réservés.</span>
+        <span>umi.com.tn</span>
       </div>
     </div>
   </footer>
+
+  <a href="https://wa.me/21622137505" target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-5 right-4 z-40 inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-3 font-semibold text-white shadow-2xl transition hover:-translate-y-1 hover:bg-green-700 md:right-6"
+     aria-label="Contacter UMI sur WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline">WhatsApp</span>
+  </a>
 
 </div>

@@ -28,6 +28,30 @@
   html {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+  }
+}
+
+::selection {
+  background: #E30613;
+  color: #ffffff;
+}
+
+@layer components {
+  .brand-tile {
+    @apply flex min-h-28 items-center justify-center rounded-2xl border border-gray-100 bg-gray-50 p-5 transition duration-300;
+  }
+
+  .brand-tile:hover {
+    @apply -translate-y-1 border-red-200 bg-white shadow-md;
+  }
+
+  .stat-tile {
+    @apply rounded-2xl border border-white/10 bg-white/5 p-5 text-center transition duration-300;
+  }
+
+  .stat-tile:hover {
+    @apply -translate-y-1 bg-white/10;
   }
 }
 
